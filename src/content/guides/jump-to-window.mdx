@@ -6,6 +6,9 @@ description: Press Jump to go from the dashboard to the VS Code window, tmux pan
 
 The Jump button is in the Needs you panel, in the Sessions list or on a session's card on the board, and in a session's details. Only Claude Code sessions have it, and it never sends keys or text to the session.
 
+<img className="dark:hidden" src="/images/jump-day.webp" alt="A session's details: checkout-flow, with Jump and Stop at the top, what it asks to run with Deny and Allow, and its status, agent, app, folder, repository, branch and pull request." />
+<img className="hidden dark:block" src="/images/jump-night.webp" alt="A session's details: checkout-flow, with Jump and Stop at the top, what it asks to run with Deny and Allow, and its status, agent, app, folder, repository, branch and pull request." />
+
 ## Where Jump works
 
 Find where your session runs:
@@ -115,4 +118,10 @@ To turn off the tmux part, set `AGENT_LOOKOUT_TMUX=off`. To turn off the tab par
 AGENT_LOOKOUT_TMUX=off AGENT_LOOKOUT_TERMINAL_JUMP=off npx agent-lookout
 ```
 
-The [Jump section of the guide](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#jump) has more. [PRIVACY.md](https://github.com/Olanetsoft/agent-lookout/blob/main/PRIVACY.md#tmux) lists every command Jump runs and what it reads, and [API.md](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/API.md#post-apijump) describes the request a press sends. New to Agent Lookout? Start with the [introduction](/) and the [quickstart](/quickstart).
+The [Jump section of the guide](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#jump) has more. [PRIVACY.md](https://github.com/Olanetsoft/agent-lookout/blob/main/PRIVACY.md#tmux) lists every command Jump runs and what it reads, and [API.md](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/API.md#post-apijump) describes the request a press sends.
+
+## Next steps
+
+- [Answer a permission prompt](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#answer-a-permission-prompt): answer with Allow or Deny from the page, without switching to the session.
+- [Quickstart](/quickstart): start Agent Lookout and jump to your first waiting session.
+- [GitHub issues](https://github.com/Olanetsoft/agent-lookout/issues): ask a question or report a problem.
