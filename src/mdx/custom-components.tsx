@@ -35,16 +35,25 @@ import { Hero as BuiltinHero } from '@/components/mdx/rich-content'
  */
 
 /**
- * The homepage hero without the space the built-in puts above its title (its
- * top padding, 1.75rem), so the title starts where the breadcrumb does on
- * every other page.
+ * The homepage hero, with this page laid out as one column, as standard docs
+ * pages are: no space above the title but the page's own padding, a subtitle
+ * that wraps evenly, and text, tables, cards and pictures all the same width.
+ * The rules apply only where the hero is, which is the homepage alone.
  */
+const HOME_LAYOUT = `
+  article.thally-docs-article { margin-top: 0 !important; max-width: 44rem; }
+  article.thally-docs-article section.thally-docs-hero { padding-top: 0; }
+  article.thally-docs-article .thally-docs-hero-copy { max-width: none; text-wrap: balance; }
+  article.thally-docs-article .thally-docs-hero p { max-width: none; }
+  article.thally-docs-article .thally-docs-hero img { border-radius: 11px; border: 1px solid color-mix(in oklab, currentColor 14%, transparent); }
+`
+
 function Hero(props: ComponentProps<typeof BuiltinHero>) {
   return (
-    // Outside the prose, whose first child is held at a margin of 0.
-    <div className="not-prose" style={{ marginTop: '-1.75rem' }}>
+    <>
+      <style>{HOME_LAYOUT}</style>
       <BuiltinHero {...props} />
-    </div>
+    </>
   )
 }
 
