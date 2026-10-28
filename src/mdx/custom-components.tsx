@@ -1,4 +1,7 @@
+import type { ComponentProps } from 'react'
 import type { MDXComponents } from 'mdx/types'
+
+import { Hero as BuiltinHero } from '@/components/mdx/rich-content'
 
 /**
  * ─────────────────────────────────────────────────────────────────────────────
@@ -30,7 +33,21 @@ import type { MDXComponents } from 'mdx/types'
  *  props from MDX (`<PricingTable plan="pro" />`). See
  *  `src/components/mdx/rich-content.tsx` for how the built-ins are written.
  */
+
+/**
+ * The homepage hero without the space the built-in puts above its title (its
+ * top padding, 1.75rem), so the title starts where the breadcrumb does on
+ * every other page.
+ */
+function Hero(props: ComponentProps<typeof BuiltinHero>) {
+  return (
+    // Outside the prose, whose first child is held at a margin of 0.
+    <div className="not-prose" style={{ marginTop: '-1.75rem' }}>
+      <BuiltinHero {...props} />
+    </div>
+  )
+}
+
 export const customComponents: MDXComponents = {
-  // Add your components here, e.g.:
-  // Highlight,
+  Hero,
 }
