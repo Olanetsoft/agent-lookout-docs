@@ -1,4 +1,4 @@
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import type { MDXComponents } from 'mdx/types'
 
 import { Hero as BuiltinHero } from '@/components/mdx/rich-content'
@@ -54,25 +54,24 @@ const HOME_LAYOUT = `
  * script with no height is its first child, so the page's content starts
  * 2.5rem lower than its padding says. This takes that gap away from the
  * element after the script only, so it does nothing once the layout changes.
- * The page's description and headings also wrap into even lines.
+ * The page's description and headings also wrap into even lines. A page asks
+ * for it with `<PageLayout />` at its top, since the published site renders a
+ * page through Thally's interpreter, which uses named components and not
+ * MDX's `wrapper`. The homepage's `Hero` asks for it too.
  */
 const EVERY_PAGE = `
   .space-y-10 > script + * { margin-top: 0 !important; }
   .thally-docs-header p, .thally-docs-article h2, .thally-docs-article h3 { text-wrap: balance; }
 `
 
-function Page({ children }: { children?: ReactNode }) {
-  return (
-    <>
-      <style>{EVERY_PAGE}</style>
-      {children}
-    </>
-  )
+function PageLayout() {
+  return <style>{EVERY_PAGE}</style>
 }
 
 function Hero(props: ComponentProps<typeof BuiltinHero>) {
   return (
     <>
+      <PageLayout />
       <style>{HOME_LAYOUT}</style>
       <BuiltinHero {...props} />
     </>
@@ -81,5 +80,5 @@ function Hero(props: ComponentProps<typeof BuiltinHero>) {
 
 export const customComponents: MDXComponents = {
   Hero,
-  wrapper: Page,
+  PageLayout,
 }
