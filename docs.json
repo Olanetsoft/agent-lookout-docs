@@ -21,24 +21,20 @@
       "href": "/quickstart"
     }
   },
+  "navigation": {
+    "display": "dropdown"
+  },
   "tabs": [
     {
-      "tab": "Get started",
+      "tab": "Documentation",
       "groups": [
         {
           "group": "Get started",
           "pages": ["introduction", "quickstart"]
-        }
-      ]
-    },
-    {
-      "tab": "Guides",
-      "groups": [
+        },
         {
           "group": "Guides",
-          "pages": [
-            "guides/jump-to-window"
-          ]
+          "pages": ["guides/jump-to-window"]
         }
       ]
     }

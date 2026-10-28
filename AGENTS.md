@@ -71,4 +71,4 @@ upgrade an existing site or move a production release pointer.
 
 ## Product context
 
-Agent Lookout is a local dashboard that shows the coding agent sessions running on a computer, from Claude Code, Codex and six other agents, and which of them are waiting on you. It is for developers who run more than one coding agent at a time and lose track of which one needs them.
+Agent Lookout is a local dashboard that shows the coding agent sessions running on a computer, from Claude Code, Codex, Antigravity, Antigravity CLI, Mistral Vibe, Gemini CLI, OpenCode and Qwen Code, and which of them are waiting on you. It is for developers who run more than one coding agent at a time and lose track of which one needs them.
