@@ -58,10 +58,17 @@ const HOME_LAYOUT = `
  * for it with `<PageLayout />` at its top, since the published site renders a
  * page through Thally's interpreter, which uses named components and not
  * MDX's `wrapper`. The homepage's `Hero` asks for it too.
+ *
+ * The sidebar also loses the title Thally puts above it when the site has a
+ * single section: it named that section, "Documentation", above the
+ * "Get started" label, so two labels that lead nowhere sat one on the other.
+ * The labels of the groups stay, as on any docs site.
  */
 const EVERY_PAGE = `
   .space-y-10 > script + * { margin-top: 0 !important; }
   .thally-docs-header p, .thally-docs-article h2, .thally-docs-article h3 { text-wrap: balance; }
+  .thally-docs-sidebar div.shrink-0:has(> p.line-clamp-1) { display: none; }
+  .thally-docs-sidebar div.shrink-0:has(> p.line-clamp-1) + nav { margin-top: 0; }
 `
 
 function PageLayout() {
