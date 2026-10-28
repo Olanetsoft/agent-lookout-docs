@@ -177,11 +177,11 @@ const templateSiteConfig: SiteConfig = {
 export const siteConfig: SiteConfig = {
   ...templateSiteConfig,
   name: "Agent Lookout",
-  description: "Agent Lookout is a local dashboard for the Claude Code and Codex sessions running on your machine. These docs are for developers running more than one coding agent at a time.",
+  description: "Agent Lookout is a local dashboard for the Claude Code and Codex sessions running on your machine, and those of the other coding agents it reads. These docs are for developers running more than one coding agent at a time.",
   repoUrl: "https://github.com/Olanetsoft/agent-lookout-docs",
   links: [
     { label: "Get started", href: "/quickstart" },
-    { label: "Support", href: "https://github.com/Olanetsoft/agent-lookout-docs/issues/new" },
-    { label: "GitHub", href: "https://github.com/Olanetsoft/agent-lookout-docs" },
+    { label: "Support", href: "https://github.com/Olanetsoft/agent-lookout/issues" },
+    { label: "GitHub", href: "https://github.com/Olanetsoft/agent-lookout" },
   ],
 };
