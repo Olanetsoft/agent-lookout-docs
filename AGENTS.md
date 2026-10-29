@@ -2,38 +2,16 @@
 
 ## Repository role
 
-Thally has three distinct repositories. `thallylabs/thally` is the only
-authored source for the open-source runtime and toolchain,
-`thallylabs/starter` is this complete customer-ready template, and
-`thallylabs/thally-cloud` is the private control plane.
+This repository holds the documentation for Agent Lookout, published with
+Thally at https://agent-lookout.thally.app. The product's code is in
+[Olanetsoft/agent-lookout](https://github.com/Olanetsoft/agent-lookout). Its
+README, `docs/GUIDE.md` and its code are the source for every fact on these
+pages: check a claim there before you write it.
 
-The sole production architecture authority is
-[`thally-cloud/ARCHITECTURE.md`](https://github.com/thallylabs/thally-cloud/blob/main/ARCHITECTURE.md).
-That repository is private; this file defines only starter-local ownership and
-workflow rules. Do not create another architecture document here.
-
-Runtime-owned files are a generated snapshot, not a second implementation.
-Never hand-apply a runtime fix here. In `thallylabs/starter`, run the **Sync
-Thally runtime** workflow, review its generated pull request, and let CI prove
-that the snapshot matches the exact runtime commit in `starter-release.json`.
-That generator is restricted to the canonical template repository. Customer
-repositories use **Update Thally framework** to open a reviewed update pull
-request from a published scaffold release. It checks weekly on Tuesday at
-03:43 UTC and also supports manual dispatch. An existing matching update PR
-is retained; customer PRs are never merged automatically. The workflow requires a published
-CLI with `--require-complete` support and stops before changes when that
-capability is unavailable. For local updates, use the ownership-aware
-`npm run starter:update` command, reviewing its dry-run plan
-and resolving framework or package conflicts before applying. Never run the
-snapshot generator against a customer tree or replace only its manifest.
-
-Before placing a feature, trace the actual creation or request path in code and
-identify the deployed artifact. Do not infer ownership from repository names
-or an outdated planning document.
-
-Package versions, scaffold releases, managed site releases, and Cloud platform
-releases are separate identities. A starter synchronization does not itself
-upgrade an existing site or move a production release pointer.
+The Thally framework files listed in `starter-release.json` are managed by
+Thally. Do not hand-edit them. Update them with the **Update Thally framework**
+workflow, which opens a pull request to review, or locally with
+`npm run starter:update`, which shows its plan before it changes anything.
 
 ## Project boundaries
 
@@ -63,7 +41,6 @@ upgrade an existing site or move a production release pointer.
 - Every page needs `title` and `description` frontmatter.
 - Keep page slugs stable once published.
 - Add pages to `docs.json`; do not leave useful pages orphaned.
-- Update `openapi.yaml` when API behavior changes.
 - Run `npm run check -- --ci`, or install the pinned CI tooling with
   `npm ci --ignore-scripts --prefix .github/thally-tooling` and run
   `.github/thally-tooling/node_modules/.bin/thally check --ci .`, `npm run typecheck`,
