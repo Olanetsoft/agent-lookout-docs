@@ -181,8 +181,7 @@ export const siteConfig: SiteConfig = {
   repoUrl: "https://github.com/Olanetsoft/agent-lookout-docs",
   links: [
     { label: "Get started", href: "/quickstart" },
-    { label: "Support", href: "https://github.com/Olanetsoft/agent-lookout-docs/issues/new" },
-    { label: "GitHub", href: "https://github.com/Olanetsoft/agent-lookout-docs" },
-    { label: "Changelog", href: "/changelog" },
+    { label: "Support", href: "https://github.com/Olanetsoft/agent-lookout/issues" },
+    { label: "GitHub", href: "https://github.com/Olanetsoft/agent-lookout" },
   ],
 };
