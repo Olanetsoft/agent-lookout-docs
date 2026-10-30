@@ -34,7 +34,7 @@
         },
         {
           "group": "Guides",
-          "pages": ["guides/jump-to-window"]
+          "pages": ["guides/jump-to-window", "guides/keep-awake"]
         }
       ]
     }
