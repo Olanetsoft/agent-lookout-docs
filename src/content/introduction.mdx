@@ -6,7 +6,7 @@ mode: home
 
 <Hero
   title="Agent Lookout"
-  subtitle="A local dashboard for the Claude Code, Codex, Antigravity, Antigravity CLI, Mistral Vibe, Gemini CLI, OpenCode and Qwen Code sessions running on your machine."
+  subtitle="A local dashboard for the Claude Code, Codex, Antigravity, Antigravity CLI, Mistral Vibe, Gemini CLI, OpenCode, Qwen Code and Hermes Agent sessions running on your machine."
   primaryLabel="Quickstart"
   primaryHref="/quickstart"
   secondaryLabel="Jump to a session's window"
@@ -43,12 +43,13 @@ Every agent's sessions appear on the page with their status. What else each one 
 | --- | --- | --- | --- |
 | Claude Code | Yes, with what it asks | With Agent Lookout's plugin | In VS Code, tmux, Terminal or iTerm2 |
 | Antigravity and the Antigravity CLI | While it asks you to approve a step | No | No |
+| Hermes Agent | From a question, and from an approval wait (shows 10 to 70 seconds late) | No | No |
 | Codex, Mistral Vibe, Gemini CLI, OpenCode and Qwen Code | No: a waiting session shows as working, or as idle in Gemini CLI | No | No |
 | Any agent that writes a [status file](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#your-own-agents) | When it writes that it waits | No | No |
 
-On Windows, OpenCode's sessions are not read, and the Antigravity app never shows as needing you. On Linux, both need the `sqlite3` program.
+On Windows, OpenCode's and Hermes Agent's sessions are not read, and the Antigravity app never shows as needing you. On Linux, all three need the `sqlite3` program.
 
-Mistral Vibe, Gemini CLI, OpenCode and Qwen Code support was built from their source and has not yet been checked on a machine running them. If you use one, [open an issue](https://github.com/Olanetsoft/agent-lookout/issues) to say whether it works. [What each agent can report](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#what-each-agent-can-report) has the details.
+Mistral Vibe, Gemini CLI, OpenCode, Qwen Code and Hermes Agent support was built from their source and has not yet been checked on a machine running them. If you use one, [open an issue](https://github.com/Olanetsoft/agent-lookout/issues) to say whether it works. [What each agent can report](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#what-each-agent-can-report) has the details.
 
 ## Privacy
 
