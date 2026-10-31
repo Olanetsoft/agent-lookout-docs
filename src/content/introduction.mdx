@@ -32,6 +32,7 @@ Then open http://127.0.0.1:4777. You need Node.js 22.12 or newer, on macOS, Linu
 - **See who needs you first.** The Needs you panel lists the sessions waiting for you, longest wait first, with the reason, such as Waiting for permission. For Claude Code it also shows what the session asks, such as `Run: npm test`.
 - **Answer or jump to a Claude Code session.** With Agent Lookout's plugin, Allow and Deny answer its permission prompt from the page. Jump opens the session in VS Code, selects its tmux pane, or brings its Terminal or iTerm2 tab forward on a Mac.
 - **Let your agents ask.** `agent-lookout mcp` is a read-only MCP server that an agent can ask which sessions are running and which need you. [For your agents](https://github.com/Olanetsoft/agent-lookout/blob/main/docs/GUIDE.md#for-your-agents) shows how to add it.
+- **Keep the Mac awake.** In the Mac app, a switch in Settings keeps the Mac from sleeping on its own while a session is working or needs you. The display still turns off. [Keep the Mac awake](/guides/keep-awake) has the rules and setup.
 
 Some of this depends on your system: on Windows, Jump reaches VS Code only, and there is no Stop, Allow or Deny. [What works on each system](https://github.com/Olanetsoft/agent-lookout/blob/main/README.md#supported-agents-and-systems) has the full table.
 
